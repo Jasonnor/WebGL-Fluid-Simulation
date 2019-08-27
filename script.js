@@ -1467,7 +1467,7 @@ function correctRadius(radius) {
   return radius
 }
 
-canvas.addEventListener('mousedown', e => {
+canvas.addEventListener('mouseover', e => {
   const posX = scaleByPixelRatio(e.offsetX)
   const posY = scaleByPixelRatio(e.offsetY)
   let pointer = pointers.find(p => p.id == -1)
@@ -1483,7 +1483,7 @@ canvas.addEventListener('mousemove', e => {
   updatePointerMoveData(pointers[0], posX, posY)
 })
 
-window.addEventListener('mouseup', () => {
+window.addEventListener('mouseout', () => {
   updatePointerUpData(pointers[0])
 })
 
