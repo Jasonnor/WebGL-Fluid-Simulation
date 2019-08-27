@@ -1,114 +1,121 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="Cache-Control" content="no-cache">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="mobile-web-app-capable" content="yes">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
 
-        <link rel="apple-touch-icon" href="logo.png">
-        <link rel="icon" href="logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
 
-        <title>WebGL Fluid Simulation</title>
-        <meta name="description" content="A WebGL fluid simulation that works in mobile browsers.">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="icon" href="logo.png">
 
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Webgl Fluid Simulation">
-        <meta property="og:description" content="A WebGL fluid simulation that works in mobile browsers.">
-        <meta property="og:url" content="https://paveldogreat.github.io/WebGL-Fluid-Simulation/">
-        <meta property="og:image" content="https://paveldogreat.github.io/WebGL-Fluid-Simulation/logo.png">
+    <title>WebGL Fluid Simulation</title>
+    <meta name="description" content="A WebGL fluid simulation that works in mobile browsers.">
 
-        <script type="text/javascript" src="dat.gui.min.js"></script>
-        <style>
-            * {
-                user-select: none;
-            }
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Webgl Fluid Simulation">
+    <meta property="og:description" content="A WebGL fluid simulation that works in mobile browsers.">
+    <meta property="og:url" content="https://paveldogreat.github.io/WebGL-Fluid-Simulation/">
+    <meta property="og:image" content="https://paveldogreat.github.io/WebGL-Fluid-Simulation/logo.png">
 
-            html, body {
-                overflow: hidden;
-                background-color: #000;
-            }
+    <script type="text/javascript" src="dat.gui.min.js"></script>
+    <style>
+        * {
+            user-select: none;
+        }
 
-            body {
-                margin: 0;
-                position: fixed;
-                width: 100%;
-                height: 100%;
-            }
+        html,
+        body {
+            overflow: hidden;
+            background-color: #000;
+        }
 
-            canvas {
-                width: 100%;
-                height: 100%;
-            }
+        body {
+            margin: 0;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
 
-            .dg {
-                opacity: 0.9;
-            }
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
 
-            .dg .property-name {
-                overflow: visible;
-            }
+        .dg {
+            opacity: 0.9;
+        }
 
-            @font-face {
-                font-family: 'iconfont';
-                src: url('iconfont.ttf') format('truetype');
-            }
+        .dg .property-name {
+            overflow: visible;
+        }
 
-            .bigFont {
-                font-size: 150%;
-                color: #8C8C8C;
-            }
+        @font-face {
+            font-family: 'iconfont';
+            src: url('iconfont.ttf') format('truetype');
+        }
 
-            .cr.function.appBigFont {
-                font-size: 150%;
-                line-height: 27px;
-                color: #A5F8D3;
-                background-color: #023C40;
-            }
+        .bigFont {
+            font-size: 150%;
+            color: #8C8C8C;
+        }
 
-            .cr.function.appBigFont .property-name {
-                float: none;
-            }
+        .cr.function.appBigFont {
+            font-size: 150%;
+            line-height: 27px;
+            color: #A5F8D3;
+            background-color: #023C40;
+        }
 
-            .cr.function.appBigFont .icon {
-                position: sticky;
-                bottom: 27px;
-            }
+        .cr.function.appBigFont .property-name {
+            float: none;
+        }
 
-            .icon {
-                font-family: 'iconfont';
-                font-size: 130%;
-                float: right;
-            }
+        .cr.function.appBigFont .icon {
+            position: sticky;
+            bottom: 27px;
+        }
 
-            .twitter:before {
-                content: 'a';
-            }
+        .icon {
+            font-family: 'iconfont';
+            font-size: 130%;
+            float: right;
+        }
 
-            .github:before {
-                content: 'b';
-            }
+        .twitter:before {
+            content: 'a';
+        }
 
-            .app:before {
-                content: 'c';
-            }
+        .github:before {
+            content: 'b';
+        }
 
-            .discord:before {
-                content: 'd';
-            }
-        </style>
-        <script>
-            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-            ga('create', 'UA-105392568-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-        <script async src='https://www.google-analytics.com/analytics.js'></script>
-    </head>
-    <body>
-        <canvas></canvas>
-        <script src="./script.js"></script>
-    </body>
+        .app:before {
+            content: 'c';
+        }
+
+        .discord:before {
+            content: 'd';
+        }
+    </style>
+    <script>
+        window.ga = window.ga || function() {
+            (ga.q = ga.q || []).push(arguments)
+        };
+        ga.l = +new Date;
+        ga('create', 'UA-105392568-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+</head>
+
+<body>
+    <canvas></canvas>
+    <script src="./script.js"></script>
+</body>
+
 </html>
