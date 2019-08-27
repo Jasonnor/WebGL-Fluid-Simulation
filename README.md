@@ -1,6 +1,10 @@
 # WebGL Fluid Simulation
 
-[Play here](https://paveldogreat.github.io/WebGL-Fluid-Simulation/)
+This repo is a simple modified version for the Wallpaper Engine.
+
+Find this workshop item [here](https://steamcommunity.com/sharedfiles/filedetails/?id=1846923623)!
+
+[Preview here](https://paveldogreat.github.io/WebGL-Fluid-Simulation/)
 
 <img src="/screenshot.jpg?raw=true" width="880">
 
